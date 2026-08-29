@@ -195,7 +195,7 @@ export default function RegistrationPage() {
           <div className="introInner">
             <div className="introLogos" aria-hidden="true">
               <div className="introLogo introLogoUmosan">
-                <img src={umosanLogo} alt="" />
+                <img src={umosanLogo} alt="" width={138} height={138} />
               </div>
 
               <div className="introJoin" aria-hidden="true">
@@ -205,7 +205,7 @@ export default function RegistrationPage() {
               </div>
 
               <div className="introLogo introLogoMust">
-                <img src={mustLogo} alt="" />
+                <img src={mustLogo} alt="" width={138} height={138} />
               </div>
             </div>
 
@@ -232,12 +232,16 @@ export default function RegistrationPage() {
               <img
                 src={umosanLogo}
                 alt="UMOSAN logo"
+                width={44}
+                height={44}
               />
             </span>
             <span className="logoPlaceholder">
               <img
                 src={mustLogo}
                 alt="Mbarara University of Science and Technology logo"
+                width={44}
+                height={44}
               />
             </span>
             <span className="srOnly">UMOSAN — MUST Chapter</span>
@@ -701,9 +705,7 @@ export default function RegistrationPage() {
       </div>
 
       <style jsx global>{`
-        @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap");
-
-        :root {
+                :root {
           --ink: #071821;
           --navy: #031827;
           --navy-2: #08263a;
@@ -823,7 +825,7 @@ export default function RegistrationPage() {
 
         .introCopy strong {
           color: #ffffff;
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           font-size: clamp(16px, 3vw, 21px);
           letter-spacing: -0.02em;
         }
@@ -925,7 +927,7 @@ export default function RegistrationPage() {
             radial-gradient(circle at 7% 36%, rgba(13, 122, 167, 0.28), transparent 24%),
             var(--navy);
           color: var(--ink);
-          font-family: "Inter", sans-serif;
+          font-family: var(--font-inter), Arial, sans-serif;
         }
 
         button,
@@ -1118,7 +1120,7 @@ export default function RegistrationPage() {
         }
 
         .hero h1 {
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           font-size: clamp(48px, 6.8vw, 82px);
           line-height: 0.88;
           margin: 0;
@@ -1179,7 +1181,7 @@ export default function RegistrationPage() {
         .chapterPitchIntro h2 {
           margin: 0;
           max-width: 720px;
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           font-size: clamp(32px, 4.2vw, 58px);
           line-height: 0.94;
           letter-spacing: -0.035em;
@@ -1246,14 +1248,14 @@ export default function RegistrationPage() {
           height: 34px;
           background: var(--green);
           color: var(--navy);
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           font-size: 11px;
         }
 
         .pitchPoints h3 {
           margin: 1px 0 7px;
           color: var(--navy);
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           font-size: 16px;
           text-transform: uppercase;
         }
@@ -1449,7 +1451,7 @@ export default function RegistrationPage() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           font-size: 12px;
           color: var(--navy);
           background: var(--green);
@@ -1547,7 +1549,7 @@ export default function RegistrationPage() {
         .submitBar strong {
           color: var(--white);
           font-size: 18px;
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           text-transform: uppercase;
           letter-spacing: -0.02em;
         }
@@ -1661,7 +1663,7 @@ export default function RegistrationPage() {
 
         .footBrand strong {
           color: #ffffff;
-          font-family: "Archivo Black", sans-serif;
+          font-family: var(--font-archivo-black), "Arial Black", sans-serif;
           font-size: 17px;
           letter-spacing: -0.02em;
         }

@@ -24,3 +24,145 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #031827;
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+
+.introLoader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(13, 122, 167, 0.22), transparent 30%),
+    linear-gradient(145deg, #02131f 0%, #031827 55%, #073750 100%);
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 600ms ease;
+}
+
+.introLoaderLeaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.introInner {
+  width: min(92vw, 520px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.introLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 34px);
+}
+
+.introLogo {
+  width: clamp(92px, 18vw, 138px);
+  height: clamp(92px, 18vw, 138px);
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 22px 60px rgba(0, 0, 0, 0.32);
+}
+
+.introLogo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.introJoin {
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.introJoin span {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #8dff4f;
+}
+
+.introCopy {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.introCopy strong {
+  color: #fff;
+  font-family: var(--font-archivo-black), Arial Black, sans-serif;
+  font-size: clamp(16px, 3vw, 21px);
+}
+
+.introCopy span {
+  color: #8fb2c2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.introProgress {
+  width: min(260px, 64vw);
+  height: 2px;
+  margin-top: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.introProgress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  background: linear-gradient(90deg, #35d07f, #8dff4f);
+  animation: umosanIntroProgress 2.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.siteContentWaiting {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes umosanIntroProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .introLoader,
+  .introProgress span {
+    animation: none !important;
+    transition-duration: 1ms !important;
+  }
+}
