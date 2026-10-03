@@ -620,8 +620,8 @@ export default function RegistrationPage() {
 
             <Field
               number="09"
-              label="Suggest a future event"
-              hint="What should the association organize next?"
+              label="Comments and suggestions"
+              hint="What would you like the chapter to do, improve ?"
               textarea
             >
               <textarea
